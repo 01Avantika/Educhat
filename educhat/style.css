@@ -1,0 +1,141 @@
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background-color:aliceblue;
+    margin-bottom: 0;
+    
+}
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+    font-size: 20px;
+    
+    
+}
+nav ul li a {
+
+    text-decoration:none;
+    color:black;
+}
+nav ul li a:hover{
+    color:rgb(77, 77, 167);
+
+}
+.btn{
+    background-color:rgb(48, 121, 224);
+    color:aliceblue;
+    padding:8px 15px;
+    border-radius:5px;
+}
+.btn:hover{
+    background-color:rgb(48, 121, 224);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    
+}
+.container h1{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 50px;
+        font-size:60px;
+        font-weight:bold;
+        line-height: 1.2;
+       
+       
+}
+.container p{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 50px;
+        font-size: 30px;
+        margin-top: 10px;
+}
+       
+    .container a:hover{
+        color:rgb(77, 77, 167);
+    }
+    
+    .container a{
+        text-decoration:none;
+        color:aliceblue;
+        font-size: 25px;
+        justify-content:space-between;
+        padding:15px 50px;
+        margin-top: 10px;
+        
+    }      
+.text {
+    max-width: 100%;
+}
+
+.image img {
+    max-width: 300px; 
+}
+
+.containers .ab h1{
+
+        
+        text-align:center;
+        padding:15px 50px;
+        font-size:40px;
+        font-weight:bold;
+        line-height: 1.2;
+}
+.containers .ab ul li img{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background-color:aliceblue;
+    margin-bottom: 0;    
+}
+.containers .ab ul{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    list-style:none;
+    display:flex;
+    gap:20px;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.containers .ab ul li a{
+    text-decoration:none;
+    color:black;
+    font-size: 30px;
+    font: weight 100px;;
+    align-items:center;
+    justify-content: center;
+   
+}
+    
+    .containers .ab ul li a:hover{
+        color:rgb(77, 77, 167);
+}
+footer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:15px 50px;
+    background-color:aliceblue;
+    margin-bottom: 50px;
+    padding-top: 50px;   
+    font-size: 15x;
+     
+}
+footer li{
+    display:inline;
+    margin: 0 15px;
+}
+    
