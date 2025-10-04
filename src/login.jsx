@@ -1,28 +1,71 @@
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import "./index.css";
 
-function Login({ onLogin }) {
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const [role, setRole] = useState('student');
 
-  const handleSubmit = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    onLogin(role);
-    navigate('/dashboard');  // Redirect to dashboard
+    console.log("Logging in with", email, password);
+
+    try {
+      const res = await fetch("http://localhost:5000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include", // ✅ important for cookies (JWT in cookie)
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        // ✅ Save token + user info (from server response)
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+        }
+        if (data.user) {
+          localStorage.setItem("user", JSON.stringify(data.user));
+        }
+
+        alert("Login successful!");
+        navigate("/student-dashboard"); // ✅ redirect
+      } else {
+        alert("Login failed: " + data.message);
+      }
+    } catch (err) {
+      console.error("Error during login:", err);
+      alert("Something went wrong!");
+    }
   };
 
   return (
-    <div className="login-form">
-      <h2>Login to EduChat</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <select value={role} onChange={(e) => setRole(e.target.value)}>
-          <option value="student">Student</option>
-          <option value="faculty">Faculty</option>
-          <option value="admin">Admin</option>
-        </select>
-        <button type="submit">Login</button>
-      </form>
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>Login</h2>
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit" className="btn">Login</button>
+        </form>
+        <p>
+          Don’t have an account? <Link to="/signup">Signup</Link>
+        </p>
+      </div>
     </div>
   );
 }
