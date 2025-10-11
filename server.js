@@ -7,8 +7,12 @@ import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
 
 dotenv.config();
+const genAI = new GoogleGenerativeAI(process.env.VITE_GEMINI_API_KEY);
+
 
 const app = express();
 app.use(express.json());
@@ -121,6 +125,24 @@ app.get("/api/dashboard", auth, (req, res) => {
   }
   res.json({ message: `Welcome ${req.user.email}, this is your student dashboard.` });
 });
+
+//  Gemini AI Route
+app.post("/api/gemini", async (req, res) => {
+  try {
+    const { prompt } = req.body;
+    if (!prompt) return res.status(400).json({ error: "Prompt is required" });
+
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const result = await model.generateContent(prompt);
+    const text = result.response.text();
+
+    res.json({ response: text });
+  } catch (err) {
+    console.error("Gemini Error:", err);
+    res.status(500).json({ error: "Failed to fetch Gemini response" });
+  }
+});
+
 
 
 const __filename = fileURLToPath(import.meta.url);

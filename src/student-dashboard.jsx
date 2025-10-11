@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; 
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const StudentDashboard = () => {
   const navigate = useNavigate();
@@ -11,6 +12,8 @@ const StudentDashboard = () => {
 console.log("logging out...");
     navigate("/"); 
   };
+
+  
 
   return (
     <div className="student-dashboard">
@@ -36,7 +39,7 @@ console.log("logging out...");
         <div className="card">
           <h3>AI Assistant</h3>
           <p>Ask anything, get instant answers</p>
-          <button>Open Chatbot</button>
+          <Link to="/ai"><button>Open Chatbot</button></Link>
         </div>
       </div>
 
