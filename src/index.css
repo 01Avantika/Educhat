@@ -1,0 +1,486 @@
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+  background-color:aliceblue;
+  margin-bottom: 0;
+  
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+  font-size: 20px;
+  
+  
+}
+nav ul li a {
+
+  text-decoration:none;
+  color:black;
+}
+nav ul li a:hover{
+  color:rgb(77, 77, 167);
+
+}
+.btn{
+  background-color:rgb(48, 121, 224);
+  color:aliceblue;
+  padding:8px 15px;
+  border-radius:5px;
+}
+.btn:hover{
+  background-color:rgb(48, 121, 224);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  
+}
+.container h1{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 50px;
+      font-size:60px;
+      font-weight:bold;
+      line-height: 1.2;
+     
+     
+}
+.container p{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 50px;
+      font-size: 30px;
+      margin-top: 10px;
+}
+     
+  .container a:hover{
+      color:rgb(77, 77, 167);
+  }
+  
+  .container a{
+      text-decoration:none;
+      color:aliceblue;
+      font-size: 25px;
+      margin-left: 35px;
+      justify-content:space-between;
+      padding:15px 50px;
+      margin-top: 30px;
+      
+  }      
+.text {
+  max-width: 100%;
+}
+
+.image img {
+  max-width: 300px; 
+}
+
+.containers .ab h1{
+
+      
+      text-align:center;
+      padding:15px 50px;
+      font-size:40px;
+      font-weight:bold;
+      line-height: 1.2;
+}
+.containers .ab ul li img{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+  background-color:aliceblue;
+  margin-bottom: 0;    
+}
+.containers .ab ul{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  list-style:none;
+  display:flex;
+  gap:20px;
+  font-size: 20px;
+  font-weight:bold;
+
+}
+
+.containers .ab p{
+ 
+  text-decoration:none;
+  color:black;
+  font-size: 25px;
+  font: weight 100px;;
+  align-items:center;
+  justify-content: center;
+  font-weight: bold;               
+ 
+}
+.features {
+display: flex;
+justify-content: space-evenly; 
+align-items: center;
+margin: 40px 0;
+text-align: center;           
+}
+
+.feature-item {
+display: flex;
+flex-direction: column; 
+align-items: center;    
+}
+
+.feature-item img {
+width: 250px;            
+height: 200px;
+margin-bottom: 10px;    
+}
+
+  
+  .containers .ab p:hover{
+      color:rgb(77, 77, 167);
+}
+footer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:15px 80px;
+  background-color:aliceblue;
+  margin-bottom: 50px;
+  padding-top: 50px;   
+  font-size: 15x;
+   
+}
+footer li{
+  display:inline;
+  margin: 0 15px;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8fafc; 
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.auth-box {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 360px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.auth-box h2 {
+  margin-bottom: 1.5rem;
+  font-size: 26px;
+  color: #222;
+}
+
+
+.auth-box input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.auth-box input:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 6px rgba(0, 102, 204, 0.3);
+}
+
+.auth-box .btn {
+  width: 100%;
+  background: #0066cc; 
+  color: #fff;
+  padding: 12px;
+  margin-top: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.auth-box .btn:hover {
+  background: #004c99;
+  transform: translateY(-2px);
+}
+
+
+.auth-box p {
+  margin-top: 1rem;
+  font-size: 14px;
+  color: #444;
+}
+
+
+.auth-box a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-box a:hover {
+  text-decoration: underline;
+}
+
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background: #fff;
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-text .subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 80%;
+  height: auto;
+}
+
+.login-dashboard {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.login-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.login-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 30px 20px;
+  text-decoration: none;
+  color: #333;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.login-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.login-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.login-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Different accent colors for each role */
+.login-card.student {
+  border-top: 5px solid #2196F3;
+}
+
+.login-card.faculty {
+  border-top: 5px solid #2196F3;
+}
+
+.login-card.visitor {
+  border-top: 5px solid #2196F3;
+}
+.dashboard {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-header {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.dashboard-header p {
+  font-size: 16px;
+  margin: 0 20px;
+}
+
+.logout-btn {
+  background: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #2c6ad8;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:nth-child(1) button {
+  background: #4285f4;
+  color: white;
+}
+
+.card:nth-child(2) button {
+  background: #34a853;
+  color: white;
+}
+
+.card:nth-child(3) button {
+  background: #6a5acd;
+  color: white;
+}
+
+.card button:hover {
+  opacity: 0.9;
+}
+
+.dashboard-footer {
+  margin-top: auto;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+#root{
+  animation: fadeIn 1.5s ;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+  
+  
