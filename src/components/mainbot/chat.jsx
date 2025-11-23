@@ -32,26 +32,32 @@ const Chat = () =>{
                 <p>How can i help you today?</p>
             </div>
          </>
-         :<div className='result'>
-            <div className='result-title'>
-                <img src={assets.usericon} alt=''></img>
-                <p>{recentPrompt}</p>
-            </div>
-            <div className="result-data">
-                <img src={assets.gemini_icon} alt=""></img>
-                {loading
-                ?<div className='loader'>
-                  <hr />
-                  <hr />
-                  <hr />
-                </div>
-                :<p dangerouslySetInnerHTML={{__html:resultData}}></p>
-                }
-                
-
-            </div>
-
-            </div>
+        : <div className="result">
+         {/* User Message */}
+         <div className="chat-row user">
+           <div className="chat-bubble user-bubble">
+             <p>{recentPrompt}</p>
+           </div>
+           <img src={assets.usericon} alt="user" className="chat-avatar" />
+         </div>
+       
+         {/* AI Message */}
+         <div className="chat-row ai">
+           <img src={assets.gemini_icon} alt="ai" className="chat-avatar" />
+           <div className="chat-bubble ai-bubble">
+             {loading ? (
+               <div className="loader">
+                 <hr />
+                 <hr />
+                 <hr />
+               </div>
+             ) : (
+               <div dangerouslySetInnerHTML={{ __html: resultData }}></div>
+             )}
+           </div>
+         </div>
+       </div>
+       
         }   
             
             

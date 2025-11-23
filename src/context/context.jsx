@@ -87,6 +87,6 @@ const ContextProvider = (props) => {
     <Context.Provider value={contextValue}>
         {props.children}
     </Context.Provider>
-    )
-}
+    );
+};
 export default ContextProvider
