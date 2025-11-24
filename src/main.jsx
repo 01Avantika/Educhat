@@ -61,7 +61,7 @@ function MainApp() {
     <ContextProvider>
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Educhat />} />
+      <Route path="/" element={<AI_assistant />} />
       <Route path="/Educhat" element={<Educhat />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
