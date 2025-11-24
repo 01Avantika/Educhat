@@ -62,6 +62,7 @@ function MainApp() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Educhat />} />
+      <Route path="/Educhat" element={<Educhat />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/about" element={<About />} />
