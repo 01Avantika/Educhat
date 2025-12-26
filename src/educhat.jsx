@@ -1,5 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Img from "./image.png";
+import Img1 from "./image1.jpeg";
+import Img2 from "./image2.jpeg";
+import Img3 from "./image3.jpeg";
+
+
 
 export default function Educhat() {
   return (
@@ -30,7 +36,7 @@ export default function Educhat() {
         </div>
 
         <div className="img">
-          <img src="image.png" width="500" height="600" alt="EduChat demo" />
+          <img src={Img} width="500" height="600" alt="EduChat demo" />
         </div>
       </section>
 
@@ -39,15 +45,15 @@ export default function Educhat() {
           <h1>Features</h1>
           <div className="features">
             <div className="feature-item">
-              <img src="image1.jpeg" alt="Secure Chat" />
+              <img src={Img1} alt="Secure Chat" />
               <p>Secure Chat</p>
             </div>
             <div className="feature-item">
-              <img src="image2.jpeg" alt="ERP Integration" />
+              <img src={Img2} alt="ERP Integration" />
               <p>ERP Integration</p>
             </div>
             <div className="feature-item">
-              <img src="image3.jpeg" alt="AI-Powered" />
+              <img src={Img3} alt="AI-Powered" />
               <p>AI-Powered</p>
             </div>
           </div>

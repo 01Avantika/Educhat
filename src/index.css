@@ -341,7 +341,7 @@ footer li{
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Different accent colors for each role */
+
 .login-card.student {
   border-top: 5px solid #2196F3;
 }
@@ -402,20 +402,33 @@ footer li{
 
 .dashboard-cards {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
   gap: 25px;
-  margin-top: 40px;
-  flex-wrap: wrap;
+  flex-wrap:nowrap;
+  margin: 40px auto;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  width: 100%;
+  max-width: 1200px;
 }
 
 .card {
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  min-height: 360px;
+  text-align: center;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 250px;
   text-align: center;
   transition: transform 0.2s;
+  
+  
 }
 
 .card:hover {
@@ -433,6 +446,12 @@ footer li{
   color: #555;
   margin-bottom: 20px;
 }
+.card img{
+   width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+
+}
 
 .card button {
   border: none;
@@ -449,12 +468,12 @@ footer li{
 }
 
 .card:nth-child(2) button {
-  background: #34a853;
+  background:  #4285f4;
   color: white;
 }
 
 .card:nth-child(3) button {
-  background: #6a5acd;
+  background:  #4285f4;
   color: white;
 }
 
